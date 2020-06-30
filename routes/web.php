@@ -22,3 +22,11 @@ route::get('/test', function () {
 route::get('/halo/{nama}', function ($nama) {
     return "Halo $nama";
 });
+
+route::get('/tes/{angka}', function ($angka) {
+    return view('tes', ['angka'=>$angka]);
+});
+
+route::get('/form', 'RegisterController@form');
+route::get('/sapa', 'RegisterController@sapa');
+Route::post('/sapa', 'RegisterController@sapa_post');
