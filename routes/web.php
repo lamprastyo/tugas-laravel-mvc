@@ -12,9 +12,9 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
 });
-
+// Tutorial Start
 route::get('/test', function () {
     return "OK";
 });
@@ -30,3 +30,8 @@ route::get('/tes/{angka}', function ($angka) {
 route::get('/form', 'RegisterController@form');
 route::get('/sapa', 'RegisterController@sapa');
 Route::post('/sapa', 'RegisterController@sapa_post');
+// Tutorial End
+Route::get('/register', 'AuthController@view_form');
+Route::post('/welcome', 'AuthController@view_welcome');
+Route::get('/home', 'HomeController@view_home');
+
